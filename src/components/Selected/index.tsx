@@ -3,6 +3,7 @@ import Animated, { SlideInDown, BounceInDown } from "react-native-reanimated";
 import { styles } from "./styles";
 import { MaterialIcons } from "@expo/vector-icons";
 import { theme } from "@/theme";
+import { Button } from "../Button";
 
 type Props = {
   quantity: number;
@@ -25,6 +26,7 @@ export function Selected({ quantity, onClear, onSearch }: Props) {
           onPress={onClear}
         />
       </View>
+      <Button title="Encontrar" onPress={onSearch} />
     </Animated.View>
   );
 }
